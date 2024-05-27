@@ -38,6 +38,10 @@ case "$2" in
 	workload="kafka"
 	args="--node-count 1 --concurrency 2n --time-limit 20 --rate 1000"
 	;;
+"5b")
+	workload="kafka"
+	args="--node-count 2 --concurrency 2n --time-limit 20 --rate 1000"
+	;;
 *)
 	>&2 echo "Unknown challenge id: $2"
 	exit 1
