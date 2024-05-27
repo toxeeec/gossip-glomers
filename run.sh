@@ -26,7 +26,7 @@ case "$2" in
 	workload="broadcast"
 	args="--node-count 5 --time-limit 20 --rate 10 --nemesis partition"
 	;;
-"3d")
+"3d" | "3e")
 	workload="broadcast"
 	args="--node-count 25 --time-limit 20 --rate 100 --latency 100"
 	;;
