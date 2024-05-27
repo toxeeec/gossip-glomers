@@ -14,6 +14,10 @@ case "$2" in
 	workload="unique-ids"
 	args="--time-limit 30 --rate 1000 --node-count 3 --availability total --nemesis partition"
 	;;
+"3a")
+	workload="broadcast"
+	args="--node-count 1 --time-limit 20 --rate 10"
+	;;
 *)
 	>&2 echo "Unknown challenge id: $2"
 	exit 1
