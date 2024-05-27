@@ -34,6 +34,10 @@ case "$2" in
 	workload="g-counter"
 	args="--node-count 3 --rate 100 --time-limit 20 --nemesis partition"
 	;;
+"5a")
+	workload="kafka"
+	args="--node-count 1 --concurrency 2n --time-limit 20 --rate 1000"
+	;;
 *)
 	>&2 echo "Unknown challenge id: $2"
 	exit 1
