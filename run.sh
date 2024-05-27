@@ -38,7 +38,7 @@ case "$2" in
 	workload="kafka"
 	args="--node-count 1 --concurrency 2n --time-limit 20 --rate 1000"
 	;;
-"5b")
+"5b" | "5c")
 	workload="kafka"
 	args="--node-count 2 --concurrency 2n --time-limit 20 --rate 1000"
 	;;
