@@ -30,6 +30,10 @@ case "$2" in
 	workload="broadcast"
 	args="--node-count 25 --time-limit 20 --rate 100 --latency 100"
 	;;
+"4")
+	workload="g-counter"
+	args="--node-count 3 --rate 100 --time-limit 20 --nemesis partition"
+	;;
 *)
 	>&2 echo "Unknown challenge id: $2"
 	exit 1
