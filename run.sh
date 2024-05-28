@@ -44,7 +44,11 @@ case "$2" in
 	;;
 "6a")
 	workload="txn-rw-register"
-	args="--node-count 1 --time-limit 20 --rate 1000 --concurrency 2n --consistency-models read-uncommitted --availability total"
+	args="--node-count 1 --concurrency 2n --time-limit 20 --rate 1000 --consistency-models read-uncommitted --availability total"
+	;;
+"6b")
+	workload="txn-rw-register"
+	args="--node-count 2 --concurrency 2n --time-limit 20 --rate 1000 --consistency-models read-uncommitted --availability total --nemesis partition"
 	;;
 *)
 	>&2 echo "Unknown challenge id: $2"
